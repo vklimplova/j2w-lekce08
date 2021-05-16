@@ -42,24 +42,24 @@ public class OsobaController {
     return "redirect:/";
   }
 
-  @GetMapping("/{id}")
+  @GetMapping("/{id:[0-9]+}")
   public Object detail(@PathVariable long id) {
     //TODO načíst údaj o osobě
     return new ModelAndView("detail")
             .addObject("osoba", seznamOsob.get(0));
   }
 
-  @PostMapping("/{id}")
-  public Object ulozit(@ModelAttribute("osoba") Osoba osoba, BindingResult bindingResult) {
+  @PostMapping("/{id:[0-9]+}")
+  public Object ulozit(@PathVariable long id, @ModelAttribute("osoba") @Valid Osoba osoba, BindingResult bindingResult) {
     if (bindingResult.hasErrors()) {
-      return "formular";
+      return "detail";
     }
     //TODO uložit údaj o osobě
     return "redirect:/";
   }
 
-  @PostMapping("/smazat/{id}")
-  public Object smazat(long id) {
+  @PostMapping(value = "/{id:[0-9]+}", params = "akce=smazat")
+  public Object smazat(@PathVariable long id) {
     //TODO smazat údaj o osobě
     return "redirect:/";
   }

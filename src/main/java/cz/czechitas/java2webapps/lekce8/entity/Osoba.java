@@ -8,6 +8,7 @@ import javax.persistence.Id;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.PastOrPresent;
+import javax.validation.constraints.Pattern;
 import java.time.LocalDate;
 
 /**
@@ -42,6 +43,7 @@ public class Osoba {
   private String email;
 
   @Length(min = 9, max = 13)
+  @Pattern(regexp = "\\+?\\d+")
   private String telefon;
 
   public Osoba() {

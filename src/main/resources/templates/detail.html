@@ -62,7 +62,7 @@
         </div>
         <div class="col-12 d-flex justify-content-end">
             <button th:if="${osoba.id} == null" type="submit" class="btn btn-primary">Přidat</button>
-            <button th:if="${osoba.id} != null" type="submit" class="btn btn-light">Smazat</button>
+            <button th:if="${osoba.id} != null" type="submit" class="btn btn-light" name="akce" value="smazat">Smazat</button>
             <button th:if="${osoba.id} != null" type="submit" class="btn btn-primary">Uložit</button>
         </div>
     </form>
