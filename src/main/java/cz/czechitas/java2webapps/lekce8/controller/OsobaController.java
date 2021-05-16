@@ -1,4 +1,4 @@
-package cz.czechitas.java2webapps.lekce8;
+package cz.czechitas.java2webapps.lekce8.controller;
 
 import cz.czechitas.java2webapps.lekce8.entity.Osoba;
 import org.springframework.stereotype.Controller;
