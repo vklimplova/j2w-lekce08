@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.validation.Valid;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -33,7 +34,7 @@ public class OsobaController {
   }
 
   @PostMapping("/novy")
-  public Object pridat(@ModelAttribute("osoba") Osoba osoba, BindingResult bindingResult) {
+  public Object pridat(@ModelAttribute("osoba") @Valid Osoba osoba, BindingResult bindingResult) {
     if (bindingResult.hasErrors()) {
       return "detail";
     }
