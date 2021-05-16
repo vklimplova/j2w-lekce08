@@ -35,9 +35,9 @@
         <tr th:each="osoba : ${osoby}">
             <td th:text="${osoba.jmeno}">Božena</td>
             <td th:text="${osoba.prijmeni}">Němcová</td>
-            <td th:text="${osoba.datumNarozeni}">4. února 1820</td>
+            <td th:text="${#temporals.format(osoba.datumNarozeni)}">4. února 1820</td>
             <td th:text="${osoba.adresa}">Vídeň</td>
-            <td class="d-flex justify-content-end"><a href="/1" th:href="@{'/'+${osoba.id}}" class="btn btn-primary">Detail</a></td>
+            <td class="d-flex justify-content-end"><a href="/1" th:href="@{/{id}(id=${osoba.id})}" class="btn btn-primary">Detail</a></td>
         </tr>
         </tbody>
     </table>
