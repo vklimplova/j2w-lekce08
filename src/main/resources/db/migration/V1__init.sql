@@ -1,6 +1,6 @@
 CREATE TABLE osoba
 (
-    id             INT IDENTITY,
+    id             IDENTITY PRIMARY KEY,
     jmeno          VARCHAR(100) NOT NULL,
     prijmeni       VARCHAR(100) NOT NULL,
     adresa         VARCHAR(200) NOT NULL,
