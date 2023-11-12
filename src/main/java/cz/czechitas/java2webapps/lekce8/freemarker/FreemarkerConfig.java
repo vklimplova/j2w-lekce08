@@ -1,8 +1,5 @@
 package cz.czechitas.java2webapps.lekce8.freemarker;
 
-import cz.czechitas.java2webapps.lekce8.freemarker.Java8TimeObjectWrapper;
-import freemarker.template.DefaultObjectWrapper;
-import freemarker.template.DefaultObjectWrapperBuilder;
 import freemarker.template.DefaultObjectWrapperConfiguration;
 import freemarker.template.Version;
 import org.springframework.beans.BeansException;
